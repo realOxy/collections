@@ -84,20 +84,3 @@ fun <E> Iterator<E>.toNodeList(): NodeList<E> {
 fun <E> Iterable<E>.toNodeList(): NodeList<E> {
     return iterator().toNodeList()
 }
-
-fun main() {
-    val nodes = listOf(1, 2f, 3.0).toNodeList()
-    nodes.forEach {
-        println(it)
-    }
-    println()
-    val anotherNodes = singlenode(3) + 8f
-    anotherNodes.forEach {
-        println(it)
-    }
-    println()
-    val list = nodes + anotherNodes
-    list.forEach {
-        println(it)
-    }
-}
